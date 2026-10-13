@@ -1,0 +1,35 @@
+src: pexels-mora-versio-2150673251-34091093.jpg
+alt: Statue of Liberty from below looking up at it
+url: https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/
+caption: Photo by Mora Versio
+title: Statue of Liberty
+
+src: pexels-tracehudson-2424391.jpg
+alt: Empire State Building with lower Manhattan in the background
+url: https://www.pexels.com/photo/empire-state-building-2424391/
+caption: Photo by Trace Hudson
+title: Empire State Building
+
+src: praswin-prakashan-YOCN1a1m_dg-unsplash.jpg
+alt: Staten Island Ferry pulling into the dock
+url: https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg
+caption: Photo by Praswin Prakashan
+title: Staten Island Ferry
+
+src: pexels-kelsey-caroline-774981359-19122990.jpg
+alt: Wonder Wheel ferris wheel at Coney Island
+url: https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/
+caption: Photo by Kelsey Caroline
+title: Wonder Wheel
+
+src: pexels-malcolmhill-12360516.jpg
+alt: Yankee Stadium seen from the water with stadium title visible.
+url: https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/
+caption: Photo by Malcolm Hill
+title: Yankee Stadium
+
+src: pexels-loquellano-12404963.jpg
+alt: Roosevelt Island Tramway leaving Manhattan
+url: https://www.pexels.com/photo/cable-car-above-city-street-12404963/
+caption: Photo by Raphael Loquellano
+title: Roosevelt Island Tramway

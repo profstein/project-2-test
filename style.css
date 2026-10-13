@@ -1,0 +1,6 @@
+
+/* basic responsive image css */
+img, video{
+  max-width: 100%;
+  height: auto;
+}
