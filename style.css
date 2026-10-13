@@ -4,3 +4,51 @@ img, video{
   max-width: 100%;
   height: auto;
 }
+
+.landmarks-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 1rem;
+}
+
+figure{ margin:0;}
+
+/* -----------------------------------------
+RESPONSIVE VIDEO EMBED
+----------------------------------------- */
+.videoWrapper {
+	position: relative;
+	padding-top: 25px;
+	height: 0;
+  clear:both;
+}
+
+/* 16:9 aspect ratio wrapper */
+.videoWrapper.ratio-16-9{
+    padding-bottom: 56.25%; /* 9 ÷ 16 = .5625 which is 56.25% */
+}
+
+/* 4:3 aspect ratio wrapper */
+.videoWrapper.ratio-4-3{
+    padding-bottom: 75%; /* 3 ÷ 4 = .75 which is 75% */
+}
+
+/*this is different than the others because it is taller than it is wide.
+So we instead of basing the size on the width of the container, we base it on the height of the viewport
+We also subtract a little (100px) to account for possible fixed header or footer.
+You can change the 100px as needed, just change it in both padding-bottom and width */
+.videoWrapper.ratio-9-16 {
+    padding-bottom: calc(100vh - 100px); /* Full height minus 100px (to account for possible fixed header or footer */
+    width: calc((100vh - 100px) * (9 / 16)); /* Calculate width based on 9:16 aspect ratio */
+    margin-inline: auto; /* center horizontally */
+    /* 9:16 */
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
