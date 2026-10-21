@@ -1,17 +1,13 @@
-
-/* basic responsive image css */
+/* -----------------------------------------
+RESPONSIVE VIDEO EMBED
+----------------------------------------- */
 img, video{
   max-width: 100%;
   height: auto;
+  margin: var()
 }
 
-.landmarks-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* grid-template-columns: 1fr 1fr; */
-  gap: 1rem;
-}
-
+/* This removes the margin from the figure element, which is often used to wrap images and videos. This ensures that the media elements in the figure are aligned withtheir containers without space around them. */
 figure{ margin:0;}
 
 /* -----------------------------------------
@@ -51,4 +47,11 @@ You can change the 100px as needed, just change it in both padding-bottom and wi
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+
+
+.landmarks-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
