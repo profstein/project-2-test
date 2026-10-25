@@ -1,10 +1,55 @@
+:root {
+  /* Typographic Styles */
+  --text-size-xs: 0.444rem;
+  --text-size-sm: 0.667rem;
+  --text-size-md: 1rem;
+  --text-size-lg: 1.5rem;
+  --text-size-xl: 2.25rem;
+  --text-size-2xl: 3.375rem;
+  --text-size-3xl: 5.063rem;
+  --line-height-base: 1.5;
+  --line-height-headings: 1.15;
+  --headings-family: "Cherry Cream Soda", sans-serif;
+  --base-family: "Source Sans 3", sans-serif;
+
+  /* Color Styles */
+  --primary-text: #232323;
+  --primary-background: #FAFAFA;
+  --action: #175BAC;
+  --action-hover: #114788;
+  --button-text: #FFFFFF;
+
+  --alternate-text: #FFFFFF;
+  --alternate-background: #973C19;
+  --alternate-action: #A3E575;
+  --alternate-action-hover: #AFF77F;
+  --alternate-button-text: #333333;
+
+  /* Spacing Units */
+  --space-unit: 0.4444444444444444rem;
+  --space-1: calc(var(--space-unit) * 1);
+  --space-2: calc(var(--space-unit) * 2);
+  --space-3: calc(var(--space-unit) * 3);
+  --space-4: calc(var(--space-unit) * 4);
+  --space-6: calc(var(--space-unit) * 6);
+  --space-8: calc(var(--space-unit) * 8);
+  --space-12: calc(var(--space-unit) * 12);
+  --space-16: calc(var(--space-unit) * 16);
+  --space-24: calc(var(--space-unit) * 24);
+  --space-32: calc(var(--space-unit) * 32);
+
+  /* Layout Styles */
+  --page-width: 53.333rem;
+  --grid-gap: var(--space-3);
+  --section-spacing: var(--space-4);
+  --content-padding: var(--space-2);
+}
 /* -----------------------------------------
 RESPONSIVE VIDEO EMBED
 ----------------------------------------- */
 img, video{
   max-width: 100%;
   height: auto;
-  margin: var()
 }
 
 /* This removes the margin from the figure element, which is often used to wrap images and videos. This ensures that the media elements in the figure are aligned withtheir containers without space around them. */
@@ -51,7 +96,52 @@ You can change the 100px as needed, just change it in both padding-bottom and wi
 
 
 
+
+/* -----------------------------------------
+PAGE STYLES
+----------------------------------------- */
+/* Featured Landmark */
+.featured{
+  background-color: var(--alternate-background);
+  color: var(--alternate-text);
+  padding:var(--space-4)
+}
+
 .landmarks-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:var(--space-4);
 }
+
+/* Landmark Cards */
+.landmark{
+   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px solid #e6e6e6;
+  background-color:var(--highlight-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.landmark figure{
+  position: relative;
+}
+.landmark figure img{
+  display:block;
+}
+.landmark figcaption{
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-background);
+  padding: var(--space-1) var(--space-1);
+/*   border-radius: 999px; */
+  text-transform: uppercase;
+  font-size:.8rem;
+  margin:0;
+}
+.landmark h3{
+  text-align: center;
+  padding: var(--space-1) var(--space-1);
+}
+

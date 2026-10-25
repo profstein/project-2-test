@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Source+Sans+3&display=swap");
+
+/* Design System Tokens: Set Base CSS variable values. */
+:root {
+  /* Typographic Styles */
+  --text-size-xs: 0.444rem;
+  --text-size-sm: 0.667rem;
+  --text-size-md: 1rem;
+  --text-size-lg: 1.5rem;
+  --text-size-xl: 2.25rem;
+  --text-size-2xl: 3.375rem;
+  --text-size-3xl: 5.063rem;
+  --line-height-base: 1.5;
+  --line-height-headings: 1.15;
+  --headings-family: "Cherry Cream Soda", sans-serif;
+  --base-family: "Source Sans 3", sans-serif;
+
+  /* Color Styles */
+  --primary-text: #232323;
+  --primary-background: #FAFAFA;
+  --action: #175BAC;
+  --action-hover: #114788;
+  --button-text: #FFFFFF;
+
+  --alternate-text: #FFFFFF;
+  --alternate-background: #973C19;
+  --alternate-action: #A3E575;
+  --alternate-action-hover: #AFF77F;
+  --alternate-button-text: #333333;
+
+  --highlight-color:#f6c445;
+
+  /* Spacing Units */
+  --space-unit: 0.4444444444444444rem;
+  --space-1: calc(var(--space-unit) * 1);
+  --space-2: calc(var(--space-unit) * 2);
+  --space-3: calc(var(--space-unit) * 3);
+  --space-4: calc(var(--space-unit) * 4);
+  --space-6: calc(var(--space-unit) * 6);
+  --space-8: calc(var(--space-unit) * 8);
+  --space-12: calc(var(--space-unit) * 12);
+  --space-16: calc(var(--space-unit) * 16);
+  --space-24: calc(var(--space-unit) * 24);
+  --space-32: calc(var(--space-unit) * 32);
+
+  /* Layout Styles */
+  --page-width: 53.333rem;
+  --grid-gap: var(--space-3);
+  --section-spacing: var(--space-4);
+  --content-padding: var(--space-2);
+}
+
+html {
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--base-family);
+  font-size: var(--text-size-md);
+  line-height: var(--line-height-base);
+  color: var(--primary-text);
+  background-color: var(--primary-background);
+  overflow-wrap: break-word;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headings-family);
+  line-height: var(--line-height-headings);
+}
+
+h1 {
+  font-size:var(--text-size-xl);
+}
+
+h2 {
+  font-size: var(--text-size-lg);
+}
+
+h3 {
+  font-size: var(--text-size-lg);
+}
+
+h4 {
+  font-size: var(--text-size-lg);
+}
+
+h5 {
+  font-size: var(--text-size-md);
+}
+
+h6 {
+  font-size: var(--text-size-md);
+}
+
+
+/* Clean heading defaults assuming parent sections handle top spacing */
+h1 {
+  margin-block-start: 0;
+  margin-block-end: var(--space-4); /* 32px on 8px base */
+}
+
+h2 {
+  margin-block-start: 0;
+  margin-block-end: var(--space-3); /* 24px on 8px base */
+}
+
+h3 {
+  margin-block-start: 0;
+  margin-block-end: var(--space-2); /* 16px on 8px base */
+}
+
+h4, h5, h6 {
+  margin-block-start: 0;
+  margin-block-end: var(--space-2); /* 16px on 8px base */
+}
+
+p, ul, ol {
+  margin: 0 0 var(--space-4);
+}
+
+small {
+  font-size: var(--text-size-sm);
+}
+
+/* Layout */
+header, main, footer {
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding: var(--space-4);
+}
+
+section, .alternate {
+  padding: var(--content-padding);
+}
+
+section + section {
+  margin-top: var(--section-spacing);
+}
+
+/* Site identity stays separate from the page heading. */
+.site-title {
+  font-size: var(--text-size-lg);
+}
+
+/* Add the alternate class to an element to apply alternate styling. */
+.alternate {
+  --action: var(--alternate-action);
+  --action-hover: var(--alternate-action-hover);
+  --button-text: var(--alternate-button-text);
+  color: var(--alternate-text);
+  background-color: var(--alternate-background);
+}
+
+/* Links and buttons */
+a {
+  color: var(--action);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--action-hover);
+}
+
+button, .button {
+  display: inline-block;
+  border: 0;
+  padding: var(--space-3) var(--space-4);
+  font: inherit;
+  color: var(--button-text);
+  background-color: var(--action);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover, .button:hover {
+  color: var(--button-text);
+  background-color: var(--action-hover);
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
